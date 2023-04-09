@@ -1,6 +1,6 @@
 # Product management system (Back-end)
 
-# Main Tech/Tools in back-end
+## Main Tech/Tools in back-end
 * Springboot Framework
 * Mybatis-plus
 * MySql - (AWS)
@@ -62,8 +62,7 @@ I will keep running the EC2.
 
 
 ## API test case by Postman
-/ProductManagementSystem-API.postman_collection.json
-This contains all the API of this back-end project.
+In /Postman-test-case folder, File, "ProductManagementSystem-API.postman_collection.json", contains all the API of this back-end project.
 You can import it in postman to make the back-end API test. 
 
 
