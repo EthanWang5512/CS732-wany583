@@ -1,6 +1,8 @@
 # CS732-wangy583-PMS-Project
-Indivdual full-stack project
-# Product Management System (Front-End)
+
+
+
+# Product Management System (Full-stack)
 
 
 
@@ -16,7 +18,7 @@ Functions
 
 • Add, delete, edit and view products in the database 
 
-• Enable to upload the product image url
+• Enable to upload the product image url to save product
 
  • Automatic paging, which can control the number of entries displayed on each page
 

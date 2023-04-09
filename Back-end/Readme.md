@@ -10,12 +10,15 @@
 These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Properties （Important !）
-In "/src/main/resources/application.properties", please do the following setting:
+Please do some config in file: **"/src/main/resources/application.properties"**, then do the following setting:
 * Default port is 8090 (You can change, if needed)
-* Please config your local mysql information on "spring.datasource.url / username / password"
+* Please config your local mysql information on **"spring.datasource.url / username / password"**
   (In next release, I will package this project in docker. Please config your local mysql for now, thank you!)
 
+
+
 ## Prerequisites
+
 What things you need to install and how to install them.
 
 * JDK 1.8+
@@ -24,13 +27,16 @@ What things you need to install and how to install them.
 * IDEA (Recommend), Eclipse
 
 ## Preparation
+
 1. Clone the repository
 2. Build the project using Maven
 
 ```bash```
 cd PsmBackend
 
-```bash``` mvn clean install
+```bash``` 
+
+mvn clean install
 
 **Make sure there is no error(no red label) in "/pom.xml", 
 sometimes some dependencies can not download successfully, restart the IDE may work.**
@@ -38,6 +44,20 @@ sometimes some dependencies can not download successfully, restart the IDE may w
 Sometimes you need to set Maven in IDE: Maven home path, setting file, local repository. 
 
 If you are the first time to use maven, it may take several minutes to download all the dependencies.
+
+
+
+# MySql
+
+https://dev.mysql.com/downloads/mysql/
+
+Config Type: Development Computer
+
+Default Port: 3306  (If you change the port, please match it in the property file)
+
+Default Username: root
+
+Use the port, username, and password in the property file. 
 
 
 
