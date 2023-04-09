@@ -71,6 +71,7 @@ You can import it in postman to make the back-end API test.
 
 For further reference, please consider the following sections:
 
+<<<<<<< HEAD
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.11-SNAPSHOT/maven-plugin/reference/html/)
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.11-SNAPSHOT/maven-plugin/reference/html/#build-image)
@@ -86,3 +87,16 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 * [MyBatis Quick Start](https://github.com/mybatis/spring-boot-starter/wiki/Quick-Start)
 * [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
+=======
+# Author
+Yifu (Ethan) Wang
+
+wany583
+
+wany583@aucklanduni.ac.nz
+
+029-02093340 
+
+If you have any question, please contact to me!
+
+>>>>>>> e24826685b8a66d1c47e776f46c5f759e1d35fa4
