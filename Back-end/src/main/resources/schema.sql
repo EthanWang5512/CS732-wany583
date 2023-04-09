@@ -1,4 +1,3 @@
-
 CREATE DATABASE IF NOT EXISTS product_management_system;
 
 USE product_management_system;
