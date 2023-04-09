@@ -27,10 +27,12 @@ Functions
 • Display notification messages by the snack bar
 
 
-# About Front-end
-## Account Information 
+
+# There are two "readme.md" in both /front-end and /Back-end folders. Please read it, thank you!
+
+
+
+# Web page account Information 
 Email: admin@gmail.com
 Password: 123456
 
-# About Back-end
-Please config your local Mysql (Details is showed "readme" in "bank-end")

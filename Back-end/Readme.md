@@ -3,72 +3,52 @@
 # Main Tech/Tools in back-end
 * Springboot Framework
 * Mybatis-plus
-* MySql
+* MySql - (AWS)
 * Postman
 
 ## Getting Started
 These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
 
-## Properties （Important !）
-Please do some config in file: **"/src/main/resources/application.properties"**, then do the following setting:
-* Default port is 8090 (You can change, if needed)
-* Please config your local mysql information on **"spring.datasource.url / username / password"**
-  (In next release, I will package this project in docker. Please config your local mysql for now, thank you!)
-
-
-
 ## Prerequisites
-
 What things you need to install and how to install them.
 
 * JDK 1.8+
 * Maven 3+
-* MySql 5+
 * IDEA (Recommend), Eclipse
 
-## Preparation
+## Install and start the back-end project
 
-1. Clone the repository
-2. Build the project using Maven
+1. Build the project using Maven
 
-```bash```
-cd PsmBackend
-
-```bash``` 
-
-mvn clean install
+```bash```mvn clean install
 
 **Make sure there is no error(no red label) in "/pom.xml", 
 sometimes some dependencies can not download successfully, restart the IDE may work.**
 
 Sometimes you need to set Maven in IDE: Maven home path, setting file, local repository. 
 
-If you are the first time to use maven, it may take several minutes to download all the dependencies.
+**If you are the first time to use maven, it may take several minutes to download all the dependencies.**
 
+2. Run the project
 
+Notice:
+If you use VSCode, you need to click into the file "PsmBackendApplication.java". 
+Here is the path: "src/main/java/com/example/psmbackend/PsmBackendApplication.java"
+Then in the top right of VSCode, there is a triangular start button. Click it to run the project.
 
-# MySql
+## About MySql Database 
 
-https://dev.mysql.com/downloads/mysql/
-
-Config Type: Development Computer
-
-Default Port: 3306  (If you change the port, please match it in the property file)
-
-Default Username: root
-
-Use the port, username, and password in the property file. 
+To avoid developer to config local Mysql database, I build the remote database on AWS.
+I will keep running the EC2. 
 
 
 
 ## Run the project
 
-
 ## API test case by Postman
 /ProductManagementSystem-API.postman_collection.json
 This contains all the API of this back-end project.
 You can import it in postman to make the back-end API test. 
-
 
 
 ### Reference Documentation
