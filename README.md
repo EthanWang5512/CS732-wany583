@@ -36,3 +36,11 @@ Functions
 Email: admin@gmail.com
 Password: 123456
 
+# Author
+Yifu (Ethan) Wang
+wany583
+wany583@aucklanduni.ac.nz
+029-02093340 
+
+If you have any question, please contact to me!
+
