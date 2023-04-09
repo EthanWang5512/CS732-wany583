@@ -13,8 +13,11 @@ import net.sf.jsqlparser.util.validation.metadata.DatabaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
+
+/**
+ * Use mybatis-plus to operate the database.
+ */
 
 @Service
 @Slf4j
@@ -23,6 +26,7 @@ public class ProductServiceImpl extends ServiceImpl<ProductDao, Product> impleme
 
     @Autowired
     private ProductDao productDao;
+
 
     @Override
     public void creatNewProduct(Integer categoryId, String title, String description, Float price, String productImage, Integer isActive) {

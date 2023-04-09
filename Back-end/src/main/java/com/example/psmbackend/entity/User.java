@@ -9,6 +9,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Java Pojo
+ * Store each data from `user` table in database.
+ * Each property represent each field in table, including field name, field type.
+ *
+ */
+
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

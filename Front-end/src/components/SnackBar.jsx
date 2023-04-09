@@ -4,6 +4,7 @@ import Snackbar from '@mui/material/Snackbar'
 import MuiAlert from '@mui/material/Alert'
 import Stack from '@mui/material/Stack'
 
+// The format of message
 const messageData = [
   {
     id: 'success',

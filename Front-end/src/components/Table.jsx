@@ -106,7 +106,7 @@ function EnhancedTableHead(props) {
   );
 }
 
-//主程序
+// Main function
 export default function EnhancedTable({ data, message, setMessage }) {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
@@ -127,7 +127,7 @@ export default function EnhancedTable({ data, message, setMessage }) {
 
 
 
-    // 搜索数据筛选
+    // Retrieve product
       useEffect(() => {
         setPage(0)
         setProducts(data.filter(product => {
@@ -167,28 +167,30 @@ export default function EnhancedTable({ data, message, setMessage }) {
   };
 
 
-  //删除对话框打开
+  //Show the delete pop-ups
   const handleClickOpen = prop => {
     setDialogStatus(true);
     setDialog(prop)
   }
 
-  //删除对话框关闭
+  //Close the delete pop-ups
   const handleClose = () => {
     setDialogStatus(false);
   }
 
-  //接收返回的修改数据值
+
+  // Get the response of updated data
   const handleChange = e => {
     setTableCellEdit({ ...tableCellEdit, [e.target.name]: e.target.value })
   }
 
-  //接收返回的新增数据值
+  // Get the response of new data
   const handleAddNew = e => {
     setNewProduct({ ...newProduct, [e.target.name]: e.target.value })
   }
 
-  //添加数据
+
+  // Create new data info
   const createProduct = (data) => {
     setOnAddNew(!onAddNew)
     console.log(data.productImage)
@@ -215,7 +217,7 @@ export default function EnhancedTable({ data, message, setMessage }) {
     })
   }
 
-  //删除数据
+  // Delete
   const onDelete = (id) => {
     const token = localStorage.getItem('token')
     const dataToDelete = {
@@ -228,7 +230,7 @@ export default function EnhancedTable({ data, message, setMessage }) {
     })
   }
 
-  //修改数据
+  // Update
   const handleData = (data) => {
     const dataToChange = {
       id:data.id,
@@ -256,13 +258,13 @@ export default function EnhancedTable({ data, message, setMessage }) {
     <Header setSearchedValue={setSearchedValue} message={message} setMessage={setMessage}/>
     <Box sx={{ mt: 2, maxWidth: { xs: 450, sm: 550, md: 1050, xl: 1450 }, ml: "auto", mr: "auto"}}>
 
-      {/* 添加按钮 */}
+      {/* "add" button */}
     <Box sx={{ fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
             <Box sx={{ display: 'flex' }} ><p>Add New</p><IconButton variant="outlined" onClick={() => setOnAddNew(true)} sx={{ px: 1.5 }}><AddIcon /></IconButton></Box>
             <Box sx={{ display: { xs: "flex" } }} >
             </Box>
 
-      {/* Excel功能 */}
+      {/* Excel */}
     <Box sx={{ display: { xs: "flex" } }} >
               <ExportExcel Products={products} setMessage={setMessage} />
             </Box>
@@ -282,7 +284,7 @@ export default function EnhancedTable({ data, message, setMessage }) {
             />
             <TableBody>
 
-              {/* 添加行 */}
+              {/* Add a new row */}
               {onAddNew &&
             <TableRow >
       <TableCell component="th" scope="row">
@@ -362,7 +364,7 @@ export default function EnhancedTable({ data, message, setMessage }) {
     </TableRow >
       }
 
-            {/* 展示数据 */}
+            {/* show the product list */}
               {products.sort(getComparator(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {
@@ -407,7 +409,7 @@ export default function EnhancedTable({ data, message, setMessage }) {
                       }
                        </TableCell>
 
-                {/* 图片上传 */}
+                {/* upload image url */}
                       <TableCell align="right">
                       <Box
                             sx={{
@@ -501,7 +503,7 @@ export default function EnhancedTable({ data, message, setMessage }) {
         />
       </Paper>
 
-      {/*删除窗口 */}
+      {/*Delete pup-ups */}
       <Dialog open={dialogStatus} >
         <DialogTitle >
           Data:{dialog.id}

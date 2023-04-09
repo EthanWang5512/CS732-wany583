@@ -8,6 +8,8 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import { apiPost , auth } from './Service'
 
+
+// Login page
 const LoginPage = ({message, setMessage}) => {
   const defaultUser = {
     email: '',

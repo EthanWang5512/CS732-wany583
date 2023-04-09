@@ -26,6 +26,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
+    // The api of login page
     @PostMapping("/login")
     public CommonResult<UserResponse> checkUserWithCredentials(@RequestBody CheckUserWithCredentialsRequest request){
         User userWithCredentials = userService.getUserWithCredentials(request.getEmail(), request.getPassword());

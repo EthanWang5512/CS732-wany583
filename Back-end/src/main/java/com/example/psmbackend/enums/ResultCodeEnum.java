@@ -2,6 +2,14 @@ package com.example.psmbackend.enums;
 
 import lombok.Getter;
 
+/**
+ * Use enum to normalise response format
+ * {
+ *     state_code: ***,
+ *     message: ***
+ * }
+ */
+
 @Getter
 public enum ResultCodeEnum {
 

@@ -10,7 +10,6 @@ import com.example.psmbackend.entity.User;
 import com.example.psmbackend.enums.ResultCodeEnum;
 import com.example.psmbackend.service.ProductService;
 import com.example.psmbackend.service.UserService;
-import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,17 +21,31 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Objects;
 
+
+/**
+ * The Controller layer serves as the web layer of the application,
+ * responsible for handling client requests and returning responses.
+ *
+ * Receiving HTTP requests, such as GET, POST, PUT, DELETE, etc.
+ * Processing business logic
+ * Handling request parameters and form data. Controller layer parses the data into Java objects and passes them on to the Service layer for processing.
+ *
+ *
+ */
 @Slf4j
 @RestController
 @RequestMapping(value = "/product")
 public class ProductController {
 
+    // Autowire service layer
     @Autowired
     ProductService productService;
 
     @Autowired
     UserService userService;
 
+
+    // Create new product information into database
     @PostMapping("/add")
     public CommonResult createNewProduct(@RequestBody CreatNewProductRequest request){
 
@@ -43,6 +56,8 @@ public class ProductController {
     }
 
 
+    // Update product information into database
+    // Image url allows to be null.
     @PostMapping("/update")
     public CommonResult updateProduct(@RequestBody UpdateProductRequest request){
 
@@ -60,6 +75,8 @@ public class ProductController {
         return CommonResult.success(ResultCodeEnum.UPDATE_SUCCESS);
     }
 
+    // Delete product information from database
+    // Before that, it needs to check token.
     @PostMapping("/delete")
     public CommonResult deleteProduct(@RequestBody DeleteProductRequest request){
 
@@ -75,6 +92,7 @@ public class ProductController {
     }
 
 
+    // Show the product list
     @GetMapping("/list")
     public CommonResult getProductList(){
 
@@ -86,6 +104,7 @@ public class ProductController {
         return CommonResult.success(productList);
     }
 
+    // Get certain product information
     @PostMapping("/get")
     public CommonResult getProductById(@RequestBody GetProductByIdRequest request){
 

@@ -10,7 +10,7 @@
 These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Prerequisites
-What things you need to install and how to install them.
+What things you need to install:
 
 * JDK 1.8+
 * Maven 3+
@@ -18,7 +18,7 @@ What things you need to install and how to install them.
 
 ## Install and start the back-end project
 
-1. Build the project using Maven
+1. In IDEA, build the project using Maven
 
 ```bash```mvn clean install
 
@@ -29,12 +29,19 @@ Sometimes you need to set Maven in IDE: Maven home path, setting file, local rep
 
 **If you are the first time to use maven, it may take several minutes to download all the dependencies.**
 
-2. Run the project
+2. Build the project
+```bash``` mvn clean package
 
-Notice:
-If you use VSCode, you need to click into the file "PsmBackendApplication.java". 
-Here is the path: "src/main/java/com/example/psmbackend/PsmBackendApplication.java"
-Then in the top right of VSCode, there is a triangular start button. Click it to run the project.
+After building, mvn will generate a "/target" folder. You can get the **jar file** in this folder. 
+
+
+3. Run the project
+
+```bash``` java -jar PsmBackend-0.0.1-SNAPSHOT.jar
+
+Notice: the .jar file name may be different, but the position is fixed. 
+
+
 
 ## About MySql Database 
 

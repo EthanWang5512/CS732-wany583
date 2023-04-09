@@ -3,6 +3,9 @@ import { Box } from '@mui/system'
 import { IconButton } from '@mui/material'
 import FileDownloadIcon from '@mui/icons-material/FileDownload'
 
+/*
+Import `xlsx` to implement export tha excel.
+ */
 const ExportExcel = ({ Products, setMessage }) => {
   const handleOnExport = products => {
     const workbook = XLSX.utils.book_new()
