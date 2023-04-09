@@ -18,12 +18,12 @@ What things you need to install:
 
 ## Install and start the back-end project
 
-### Step 1. In IDEA, build the project using Maven
+### Step 1. Build the project using Maven
 
 ```bash```mvn clean install
 
 **Make sure there is no error(no red label) in "/pom.xml", 
-sometimes some dependencies can not download successfully, restart the IDE may work.**
+sometimes some dependencies can not download successfully, restart the IDE/VScode may work.**
 
 Sometimes you need to set Maven in IDE: Maven home path, setting file, local repository. 
 
